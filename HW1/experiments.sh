@@ -12,7 +12,7 @@ do
     echo "-----------------------------" >> sysbench_data/"sys_output$((index))".txt
 
     # first line in new text file = command
-    echo "COMMAND: ${command}" >> sysbench_data/"sys_output$((index))".txt
+    echo "COMMAND: $(head -$index commands.txt | tail -1)" >> sysbench_data/"sys_output$((index))".txt
 
     for trial in 0 1 2 3 4 
     do
