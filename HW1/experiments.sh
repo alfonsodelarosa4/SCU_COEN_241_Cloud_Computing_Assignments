@@ -14,11 +14,11 @@ do
     # first line in new text file = command
     echo "COMMAND: $(head -$index commands.txt | tail -1)" >> sysbench_data/"sys_output$((index))".txt
     if ((index == 13)); then
-        sysbench --test=fileio --file-total-size=5G --file-test-mode=seqrd prepare
+        sysbench --test=fileio --file-total-size=2G --file-test-mode=seqrd prepare
     elif ((index == 14)); then
-        sysbench --test=fileio --file-total-size=10G --file-test-mode=seqrd prepare
+        sysbench --test=fileio --file-total-size=4G --file-test-mode=seqrd prepare
     elif ((index == 15)); then
-        sysbench --test=fileio --file-total-size=15G --file-test-mode=seqrd prepare
+        sysbench --test=fileio --file-total-size=8G --file-test-mode=seqrd prepare
     fi  
     for trial in 0 1 2 3 4 
     do          
@@ -47,11 +47,11 @@ do
 
     done
     if ((index == 13)); then
-        sysbench --test=fileio --file-total-size=5G --file-test-mode=seqrd cleanup
+        sysbench --test=fileio --file-total-size=2G --file-test-mode=seqrd cleanup
     elif ((index == 14)); then
-        sysbench --test=fileio --file-total-size=10G --file-test-mode=seqrd cleanup
+        sysbench --test=fileio --file-total-size=4G --file-test-mode=seqrd cleanup
     elif ((index == 15)); then
-        sysbench --test=fileio --file-total-size=15G --file-test-mode=seqrd cleanup
+        sysbench --test=fileio --file-total-size=8G --file-test-mode=seqrd cleanup
     fi     
 done
 
