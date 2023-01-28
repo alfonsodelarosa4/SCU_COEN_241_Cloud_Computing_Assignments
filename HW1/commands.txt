@@ -1,0 +1,4 @@
+sysbench --test=cpu --cpu-max-prime=1000 run
+sysbench --test=cpu --cpu-max-prime=5000 run
+sysbench --test=cpu --cpu-max-prime=10000 run
+sysbench --test=cpu --cpu-max-prime=15000 run
