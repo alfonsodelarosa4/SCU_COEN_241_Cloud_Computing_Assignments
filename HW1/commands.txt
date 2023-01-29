@@ -12,4 +12,3 @@ sysbench --test=fileio --num-threads=10 --file-test-mode=seqwr run
 sysbench --test=fileio --num-threads=15 --file-test-mode=seqwr run
 sysbench --test=fileio --file-total-size=2G --file-test-mode=seqrd run
 sysbench --test=fileio --file-total-size=4G --file-test-mode=seqrd run
-sysbench --test=fileio --file-total-size=6G --file-test-mode=seqrd run
